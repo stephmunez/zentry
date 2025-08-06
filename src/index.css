@@ -44,7 +44,7 @@ body {
   }
 
   .nav-hover-btn {
-    @apply font-general relative ms-10 cursor-pointer text-xs uppercase text-blue-50 after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 dark:after:bg-white;
+    @apply relative ms-10 cursor-pointer font-general text-xs uppercase text-blue-50 after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 dark:after:bg-white;
   }
 
   .floating-nav {
@@ -73,7 +73,7 @@ body {
   }
 
   .about-subtext {
-    @apply font-circular-web absolute bottom-[-80dvh] left-1/2 w-full max-w-96 -translate-x-1/2 text-center text-lg md:max-w-[34rem];
+    @apply absolute bottom-[-80dvh] left-1/2 w-full max-w-96 -translate-x-1/2 text-center font-circular-web text-lg md:max-w-[34rem];
   }
 
   .about-image {
@@ -152,18 +152,33 @@ body {
   animation-delay: calc(var(--animation-order) * 0.1s);
 }
 
+/* Play button initial look */
+
+.play-shape:nth-child(2) {
+  @apply h-[20px];
+}
+.play-shape:nth-child(3) {
+  @apply h-[16px];
+}
+.play-shape:nth-child(4) {
+  @apply h-[12px];
+}
+.play-shape:nth-child(5) {
+  @apply h-[8px];
+}
+.play-shape:nth-child(6) {
+  @apply h-[4px];
+}
+
 @keyframes indicator-line {
   0% {
     height: 4px;
-    transform: translateY(-0px);
   }
   50% {
-    height: 16px;
-    transform: translateY(-4px);
+    height: 20px;
   }
   100% {
     height: 4px;
-    transform: translateY(-0px);
   }
 }
 
